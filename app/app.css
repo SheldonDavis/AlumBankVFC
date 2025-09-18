@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    --color-background:#efefef;
+    --color-background-dark:#dbdbdb;
+    --color-primary: #4D6C80;
+    --color-secondary: #A63D40;
+    --color-accent: #D9B35D;
+    --color-accent-foreground: #F7F7F7;
+    --color-accent-dark: #333;
+    --color-muted: #ECECEC;
+}
+
+html,
+body {
+  
+   @apply bg-(--color-background) ;
+   /*dark:bg-gray-950*/
+
+  /* @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }  */
+}
+main{
+  @apply pt-16 pb-16 pr-8 pl-8 m-auto max-w-7xl;
+}
+header{
+  @apply fixed md:sticky top-0 w-full h-full md:h-auto;
+}
+nav{
+  @apply w-full h-full bg-(--color-background-dark) transition-[left] left-0 relative;
+  /* border-(--color-accent-dark) border-b-2 border-solid */
+
+}
+nav.isClosed{@apply left-full md:left-auto md:transition-none;}
+nav>span{
+  @apply p-4 md:hidden cursor-pointer inline-block fixed right-0 bg-(--color-background-dark) z-10;
+}
+nav>ul{
+  @apply  gap-2 text-center items-stretch m-auto max-w-7xl flex flex-col 
+  md:flex-row ;
+}
+nav.isClosed>ul{
+  /* @apply  max-h-full; */
+}
+nav>ul>li{@apply  items-stretch relative md:flex;}
+nav>ul>li>a{
+  @apply border-solid border-transparent border-b-2 block p-4 content-center;
+  /*underline transition-colors text-(--color-accent) hover:text-(--color-primary-hover)*/
+}
+nav>ul>li>a.active{
+  @apply border-solid border-(--color-secondary) border-b-2;
+}
+nav>ul>li>a.active:hover{
+  @apply  border-transparent ;
+}
+nav>ul>li>ul{
+  @apply cursor-pointer w-auto text-left z-10 p-2 min-w-full w-max bg-(--color-background) 
+  md:bg-(--color-background-dark) md:absolute md:top-full md:left-0;
+}
+nav>ul>li>ul>li{}
+nav>ul>li>ul>li>p{}
+nav>ul>li>ul>li>p>a{}
+
+article a{
+  @apply underline transition-colors text-(--color-primary) hover:text-(--color-secondary);
+}
+
+h1{
+  @apply text-3xl mb-8;
+}
+article{
+  @apply mb-16;
+}
+article h3{
+  @apply text-xl mb-4;
+}
+article p{
+  @apply mb-4;
+}
+article li p{
+  @apply mb-2;
+}
