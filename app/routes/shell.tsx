@@ -2,7 +2,7 @@ import { Outlet } from 'react-router';
 import Header from '../Components/Header';
 import type { Route } from './+types/shell';
 
-export async function loader({ params, request }: Route.LoaderArgs) {
+export async function clientLoader({ params, request }: Route.LoaderArgs) {
   const url = new URL(request.url);
   const match = url.pathname.match(/\/(.*?)\//);
   const path = match ? match[1] : ``;
