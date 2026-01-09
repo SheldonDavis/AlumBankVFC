@@ -1,6 +1,6 @@
 import type { VFC_Page } from '~/customTypes/Page';
 
-const imagePath = `/public/apparatus/`;
+const imagePath = `/apparatus/`;
 
 export const Apparatus_Data: VFC_Page = {
   elements: [
