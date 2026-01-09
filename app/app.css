@@ -28,10 +28,11 @@ main{
   @apply pt-16 pb-16 pr-8 pl-8 m-auto max-w-7xl;
 }
 header{
-  @apply fixed md:sticky top-0 w-full h-full md:h-auto;
+  @apply   top-0 w-full  md:h-auto md:sticky;
+  /* fixed */
 }
 nav{
-  @apply w-full h-full bg-(--color-background-dark) transition-[left] left-0 relative;
+  @apply w-full h-full bg-(--color-background-dark) transition-[left] left-0 fixed md:relative;
   /* border-(--color-accent-dark) border-b-2 border-solid */
 
 }
@@ -83,4 +84,7 @@ article p{
 }
 article li p{
   @apply mb-2;
+}
+.CalendarEvents aside{
+  @apply mb-8 p-4 bg-(--color-muted) border-solid border-(--color-accent-dark) border-2;
 }

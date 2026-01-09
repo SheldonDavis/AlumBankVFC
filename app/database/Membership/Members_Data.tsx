@@ -43,7 +43,7 @@ const MemberList: VFC_List[] = [
 export const Members_Data: VFC_Page = {
   elements: [
     {
-      content: [{ type: `list`, values: MemberList }],
+      content: [{ type: `list`, values: MemberList, css: `test` }],
     },
   ],
 };

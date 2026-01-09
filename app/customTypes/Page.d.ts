@@ -15,6 +15,7 @@ type VFC_Data={
   link?:string;
   target?:`_blank`|`_self`|`_parent`|`_top`;
   alt?:string;
+  css?:string;
 }
 
 type VFC_List={

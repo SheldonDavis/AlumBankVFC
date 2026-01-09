@@ -2,7 +2,7 @@ import type { VFC_Data } from '~/customTypes/Page';
 
 export default function Image(item: VFC_Data) {
   return (
-    <p>
+    <p className={item?.css ? item.css : ``}>
       {item?.link ? (
         <a href={item.link} target={item?.target ? item.target : ``}>
           <img src={item.value} alt={item?.alt ? `${item.alt}` : `${item.value}`} title={item?.alt ? `${item.alt}` : `${item.value}`} />

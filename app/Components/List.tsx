@@ -6,7 +6,7 @@ export default function List(item: VFC_Data) {
   return (
     <>
       {item?.label && <Title {...item} />}
-      <ul>
+      <ul className={item?.css ? item.css : ''}>
         {item?.values?.map((listItem, index) => (
           <li key={index}>
             <Paragraph {...listItem} />

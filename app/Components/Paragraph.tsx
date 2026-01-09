@@ -54,7 +54,7 @@ export default function Paragraph(item: VFC_Data | VFC_List) {
   }
 
   return (
-    <p>
+    <p className={'css' in item && item?.css ? item.css : ``}>
       {item?.label && (
         <>
           <strong>{item?.label}: </strong>
