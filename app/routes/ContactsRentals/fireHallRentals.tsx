@@ -61,6 +61,8 @@ export default function FireHallRentals({ loaderData }: Route.ComponentProps) {
     try {
       const res = await fetch(ENV.VITE_GAS_FORM_HANDLER_URL, {
         method: 'POST',
+        mode: 'no-cors',
+        cache: 'no-cache',
         headers: {
           // set content type header for GAS
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -69,14 +71,14 @@ export default function FireHallRentals({ loaderData }: Route.ComponentProps) {
         body: urlEncodedData,
       });
 
-      //check for ok response
-      if (!res.ok) {
-        throw new Error(`HTTP error! Status: ${res.status}. Check your Apps Script logs.`);
-      }
+      // //check for ok response
+      // if (!res.ok) {
+      //   throw new Error(`HTTP error! Status: ${res.status}. Check your Apps Script logs.`);
+      // }
 
       // Success case
       setSubmissionStatus({
-        message: 'Fire Hall inquiry submitted successfully! We will be in touch.',
+        message: 'Fire Hall inquiry submitted! We will be in touch.',
         type: 'success',
       });
       // Clear the form after successful submission
@@ -122,7 +124,6 @@ export default function FireHallRentals({ loaderData }: Route.ComponentProps) {
           className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150'
           disabled={isSubmitting}
         />
-
         <label htmlFor='email' className='block text-sm font-medium text-gray-700 mt-4 mb-1'>
           Email
         </label>
@@ -135,9 +136,20 @@ export default function FireHallRentals({ loaderData }: Route.ComponentProps) {
           className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150'
           disabled={isSubmitting}
         />
-
+        <label htmlFor='phone' className='block text-sm font-medium text-gray-700 mt-4 mb-1'>
+          Phone Number
+        </label>
+        <input
+          id='phone'
+          type='tel'
+          name='phone'
+          placeholder='(123) 456-7890'
+          required
+          className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150'
+          disabled={isSubmitting}
+        />
         <label htmlFor='email' className='block text-sm font-medium text-gray-700 mt-4 mb-1'>
-          Message
+          Please describe the occasion and the best time for us to contact you.
         </label>
         <textarea
           id='Message'
@@ -146,9 +158,7 @@ export default function FireHallRentals({ loaderData }: Route.ComponentProps) {
           className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150'
           disabled={isSubmitting}
         ></textarea>
-
         <input type={`checkbox`} name={`honeypot`} style={{ display: `none` }} aria-hidden={`true`} />
-
         <button
           type='submit'
           disabled={isSubmitting}
