@@ -54,8 +54,8 @@ export default function RequestForm({ submitBtnText, txtAreaLBL, formName, formF
     try {
       const res = await fetch(ENV.VITE_GAS_FORM_HANDLER_URL, {
         method: 'POST',
-        mode: 'no-cors',
-        cache: 'no-cache',
+        // mode: 'no-cors',
+        // cache: 'no-cache',
         headers: {
           // set content type header for GAS
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -63,11 +63,10 @@ export default function RequestForm({ submitBtnText, txtAreaLBL, formName, formF
         // Send the URL-encoded string as the body
         body: urlEncodedData,
       });
-
-      // //check for ok response
-      // if (!res.ok) {
-      //   throw new Error(`HTTP error! Status: ${res.status}. Check your Apps Script logs.`);
-      // }
+      //check for ok response
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}. Check your Apps Script logs.`);
+      }
 
       // Success case
       setSubmissionStatus({
