@@ -28,7 +28,7 @@ export default function Header(params: any) {
     value: `AlumBankBadgeTrace.png`,
     alt: `Alum Bank Volunteer Fire Company Logo`,
     link: `/`,
-    css: `h-45 max-h-full w-auto pt-4`,
+    css: `h-45 max-h-full w-auto py-4`,
   };
 
   function toggleSubNav(s: string) {

@@ -14,10 +14,11 @@
     --color-accent-foreground: #ECEFF1;
     --color-accent-dark: #37474F;
     --color-muted: #ECECEC;
+    --color-header:#691919;
 }
 
 html,
-body,header {
+body {
   
    @apply bg-(--color-background) ;
    /*dark:bg-gray-950*/
@@ -30,7 +31,7 @@ main{
   @apply pt-16 pb-16 pr-8 pl-8 m-auto max-w-7xl;
 }
 header{
-  @apply   top-0 w-full  md:h-auto md:sticky;
+  @apply   top-0 w-full  md:h-auto md:sticky bg-(--color-header);
   /* fixed */
 }
 nav{
@@ -69,7 +70,7 @@ nav>ul>li>ul>li>p{}
 nav>ul>li>ul>li>p>a{ @apply p-2 block}
 
 article a{
-  @apply underline transition-colors text-(--color-secondary-hover) hover:text-(--color-secondary) focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ;
+  @apply underline transition-colors text-(--color-secondary) hover:text-(--color-secondary-hover) focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ;
 }
 
 h1{
