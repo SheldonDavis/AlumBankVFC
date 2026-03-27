@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 //icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,6 +15,7 @@ import type { VFC_Data } from '~/customTypes/Page';
 import Image from '~/Components/Image';
 
 export default function Header(params: any) {
+  console.log(params);
   const [subNavOpen, setSubNavOpen] = useState(``);
   const HoverToOpenMenuDD = ` hidden md:group-hover:block `;
   const ToggledOpenMenuDD = ` block `;
@@ -25,7 +26,7 @@ export default function Header(params: any) {
 
   const logo: VFC_Data = {
     type: `i`,
-    value: `AlumBankBadgeTrace.png`,
+    value: `/AlumBankBadgeTrace.png`,
     alt: `Alum Bank Volunteer Fire Company Logo`,
     link: `/`,
     css: `h-45 max-h-full w-auto py-4`,
@@ -34,14 +35,10 @@ export default function Header(params: any) {
   function toggleSubNav(s: string) {
     s === subNavOpen ? setSubNavOpen(``) : setSubNavOpen(s);
   }
-
   return (
     <header className={`flex items-center flex-col gap-4 shrink-0`}>
       <Image {...logo} />
       <nav className={mobileNavOpen ? MobileNavOpen : MobileNavClosed}>
-        {
-          //bg-slate-900
-        }
         <span
           onClick={() => {
             setMobileNavOpen(!mobileNavOpen);
@@ -55,12 +52,18 @@ export default function Header(params: any) {
               {item?.link && (
                 <NavLink
                   to={item.link}
-                  className={`${params.path === item.link.split(`/`)[1] && `active`}`}
+                  className={({ isActive }) => {
+                    // Check if the current URL matches the parent OR any of its sub-values
+                    const isChildActive = item.values?.some((sub) => window.location.pathname === sub.link);
+
+                    return isActive || isChildActive ? `active` : ``;
+                  }}
                   onClick={(e) => {
                     item?.type !== `t` && e.preventDefault();
                     toggleSubNav(item?.type === `t` ? `` : item.link?.split(`/`)[1] || ``);
                     {
                       item?.type === `t` && setMobileNavOpen(false);
+                      console.log(item.link?.split(`/`)[1]);
                     }
                   }}
                 >
@@ -81,6 +84,7 @@ export default function Header(params: any) {
                                 toggleSubNav(``);
                                 setMobileNavOpen(false);
                               }}
+                              end
                             >
                               {subItem?.value}
                             </NavLink>
