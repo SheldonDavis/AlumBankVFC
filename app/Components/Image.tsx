@@ -4,8 +4,13 @@ export default function Image(item: VFC_Data) {
   return (
     <p className={item?.css ? item.css : ``}>
       {item?.link ? (
-        <a href={item.link} target={item?.target ? item.target : ``}>
-          <img src={item.value} alt={item?.alt ? `${item.alt}` : `${item.value}`} title={item?.alt ? `${item.alt}` : `${item.value}`} />
+        <a href={item.link} target={item?.target ? item.target : ``} className={` block h-full`}>
+          <img
+            src={item.value}
+            alt={item?.alt ? `${item.alt}` : `${item.value}`}
+            title={item?.alt ? `${item.alt}` : `${item.value}`}
+            className={` block h-full w-auto object-contain `}
+          />
         </a>
       ) : (
         <img src={item.value} alt={item?.alt ? `${item.alt}` : `${item.value}`} title={item?.alt ? `${item.alt}` : `${item.value}`} />

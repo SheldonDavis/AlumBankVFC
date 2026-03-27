@@ -155,8 +155,8 @@ export default function RequestForm({ submitBtnText, txtAreaLBL, formName, formF
           className={`w-full mt-6 py-3 px-4 rounded-lg shadow-md text-sm font-medium transition duration-200 ease-in-out transform 
             ${
               isSubmitting
-                ? 'bg-blue-400 text-white cursor-not-allowed'
-                : 'cursor-pointer bg-blue-600 text-white hover:bg-blue-700 hover:shadow-none hover:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+                ? 'bg-secondary-await text-white cursor-not-allowed'
+                : 'cursor-pointer bg-secondary text-white hover:bg-secondary-hover hover:shadow-none hover:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
             }`}
         >
           {isSubmitting ? 'Submitting...' : submitBtnText}
