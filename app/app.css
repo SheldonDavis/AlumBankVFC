@@ -35,12 +35,11 @@ header{
   /* fixed */
 }
 nav{
-  @apply w-full h-full bg-(--color-background-dark) shadow-sm  ;
-
+  @apply w-full h-full bg-(--color-background-dark) shadow-sm ;
 }
-nav.isClosed{@apply left-full md:left-auto md:transition-none;}
+/* nav.isClosed{@apply left-full md:left-auto md:transition-none;} */
 nav>ul{
-  @apply  gap-2 text-center items-stretch m-auto max-w-7xl flex flex-col 
+  @apply  gap-2 text-center items-stretch m-auto max-w-7xl flex flex-col justify-center
   md:flex-row md:gap-4;
 }
 nav>ul>li{@apply  items-stretch relative md:flex;}
@@ -58,7 +57,27 @@ nav>ul>li>ul{
   md:bg-(--color-background-dark) md:absolute md:top-full md:left-0;
 }
 nav>ul>li>ul>li>p>a{ @apply  block p-2 text-center md:text-left}
-nav>span{@apply hidden}
+nav>span{@apply md:hidden}
+
+/*
+*start styles for hamburger nav menu
+*/
+nav{
+  @apply fixed top-0 h-full ease-in-out duration-300 inset-shadow-sm md:shadow-sm md:relative md:bottom-auto md:h-auto
+}
+nav.isClosed{
+  @apply -top-full ;
+}
+nav>ul{
+@apply h-full md:h-auto
+}
+nav span{
+  @apply fixed top-2 right-2 bg-(--color-header) p-2 rounded-sm cursor-pointer
+}
+nav span svg path{ @apply fill-(--color-background-dark) ease-in-out}
+/*
+*end styles for hamburger nav menu
+*/
 
 
 article a{
@@ -82,9 +101,7 @@ article li p{
 }
 h1, h3, p{@apply text-(--color-accent-dark);}
 
-{
-  @apply p-4 bg-(--color-background) border-solid border-(--color-accent-dark) border-1 rounded-sm md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)];
-}
+
 
 .cardArticles, .CalendarEvents{
   @apply flex gap-4 flex-col md:flex-wrap md:flex-row md:items-start;
