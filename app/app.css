@@ -35,25 +35,17 @@ header{
   /* fixed */
 }
 nav{
-  @apply w-full h-full bg-(--color-background-dark) transition-[left] left-0 fixed md:relative;
-  /* border-(--color-accent-dark) border-b-2 border-solid */
+  @apply w-full h-full bg-(--color-background-dark)  ;
 
 }
 nav.isClosed{@apply left-full md:left-auto md:transition-none;}
-nav>span{
-  @apply p-4 md:hidden cursor-pointer inline-block fixed right-0 bg-(--color-background-dark) z-10;
-}
 nav>ul{
   @apply  gap-2 text-center items-stretch m-auto max-w-7xl flex flex-col 
-  md:flex-row ;
-}
-nav.isClosed>ul{
-  /* @apply  max-h-full; */
+  md:flex-row md:gap-4;
 }
 nav>ul>li{@apply  items-stretch relative md:flex;}
 nav>ul>li>a{
-  @apply border-solid border-transparent border-b-2 block p-4 content-center  ;
-  /*underline transition-colors text-(--color-accent) hover:text-(--color-primary-hover)*/
+  @apply border-solid border-transparent border-b-2 block p-2 content-center text-lg;
 }
 nav>ul>li>a.active{
   @apply border-solid border-(--color-secondary) border-b-2;
@@ -65,17 +57,9 @@ nav>ul>li>ul{
   @apply cursor-pointer w-auto text-left z-10 p-2 min-w-full w-max bg-(--color-background) 
   md:bg-(--color-background-dark) md:absolute md:top-full md:left-0;
 }
-nav>ul>li>ul>li{}
-nav>ul>li>ul>li>p{}
-nav>ul>li>ul>li>p>a{ @apply p-2 block}
-
-/* testing alternative mobile menu */
-nav>ul>li>a{@apply p-1;}
-nav>ul>li>ul>li>p>a{ @apply p-0.75 text-center md:text-left}
-nav{@apply relative  }
+nav>ul>li>ul>li>p>a{ @apply  block p-2 text-center md:text-left}
 nav>span{@apply hidden}
-nav.isClosed{@apply left-auto}
-/* END testing alternative mobile menu */
+
 
 article a{
   @apply underline transition-colors text-(--color-secondary) hover:text-(--color-secondary-hover) focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ;
@@ -85,7 +69,7 @@ h1{
   @apply text-3xl mb-8;
 }
 article{
-  @apply mb-16;
+  @apply mb-8;
 }
 article h3{
   @apply text-xl mb-4;
@@ -116,3 +100,8 @@ h1, h3, p{@apply text-(--color-accent-dark);}
 }
 .cardArticles > article ul,.CalendarEvents > aside ul{ @apply ml-4;}
 .cardArticles > article li,.CalendarEvents > aside li{ @apply list-disc;}
+
+form{
+  @apply max-w-md mx-auto p-4 bg-(--color-background) border-solid border-(--color-accent-dark) border-1 rounded-lg;
+}
+.formPGHeader{@apply max-w-md mx-auto;}
