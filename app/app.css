@@ -90,7 +90,7 @@ h1, h3, p{@apply text-(--color-accent-dark);}
   @apply flex gap-4 flex-col md:flex-wrap md:flex-row md:items-start;
 }
 .cardArticles > article, .CalendarEvents > aside{
-  @apply p-4 bg-(--color-background) border-solid border-(--color-accent-dark) border-1 rounded-lg md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)];
+  @apply p-4 bg-(--color-background) border-solid border-(--color-accent-dark) border-1 rounded-lg md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] shadow-lg;
 }
 .cardArticles > article  img, .CalendarEvents > aside  img{
   @apply w-full h-auto mb-4;
