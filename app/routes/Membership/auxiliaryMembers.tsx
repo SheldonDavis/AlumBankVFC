@@ -24,9 +24,11 @@ export default function AuxiliaryMembers({ loaderData }: Route.ComponentProps) {
   return (
     <>
       <h1>Auxiliary Members</h1>
-      {AuxiliaryMembers_Data.elements.map((block, index) => {
-        return <Article key={index} data={block} />;
-      })}
+      <div className={`cardArticles`}>
+        {AuxiliaryMembers_Data.elements.map((block, index) => {
+          return <Article key={index} data={block} />;
+        })}
+      </div>
       {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
         <Article key={i} data={block} />
       ))} */}

@@ -68,11 +68,11 @@ export default function CarShow({ loaderData }: Route.ComponentProps) {
         {events.map((calEvent, index) => {
           return (
             <aside key={index}>
-              <p>
+              <h3>
                 <a href={calEvent.htmlLink} target='_blank'>
                   {calEvent.summary}
                 </a>
-              </p>
+              </h3>
               {calEvent.start.dateTime ? (
                 <p>
                   {new Date(calEvent.start.dateTime).toLocaleDateString('en-US', dateFormatOptions)}{' '}
