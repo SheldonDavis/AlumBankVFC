@@ -15,7 +15,7 @@ import type { VFC_Data } from '~/customTypes/Page';
 import Image from '~/Components/Image';
 
 export default function Header(params: any) {
-  console.log(params);
+  // console.log(params);
   const [subNavOpen, setSubNavOpen] = useState(``);
   const HoverToOpenMenuDD = ` hidden md:group-hover:block `;
   const ToggledOpenMenuDD = ` block `;
@@ -63,7 +63,7 @@ export default function Header(params: any) {
                     toggleSubNav(item?.type === `t` ? `` : item.link?.split(`/`)[1] || ``);
                     {
                       item?.type === `t` && setMobileNavOpen(false);
-                      console.log(item.link?.split(`/`)[1]);
+                      // console.log(item.link?.split(`/`)[1]);
                     }
                   }}
                 >
