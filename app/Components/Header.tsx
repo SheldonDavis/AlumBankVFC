@@ -27,7 +27,7 @@ export default function Header(params: any) {
   const MobileNavOpen = `isOpened`;
   const MobileNavClosed = `isClosed`;
 
-  const breakpoint = 5;
+  const breakpoint = 2;
 
   useEffect(() => {
     const handleScroll = () => setScrollPos(window.scrollY);
@@ -39,7 +39,7 @@ export default function Header(params: any) {
     const isScrolled = scrollPos >= breakpoint;
 
     return {
-      css: `${isScrolled ? 'h-24 py-3' : 'h-40 py-4'} max-h-full w-auto  transition-all ease-in-out duration-100`,
+      css: `${isScrolled ? 'h-27 py-3' : 'h-40 py-4'} max-h-full w-auto  transition-all ease-in-out duration-100`,
       type: `i`,
       value: `/AlumBankBadgeTrace.png`,
       alt: `Alum Bank Volunteer Fire Company Logo`,
