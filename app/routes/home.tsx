@@ -8,6 +8,7 @@ import Article from '~/Components/Article';
 
 //import page data
 import { Home_Data } from '~/database/Home_Data';
+import HeroImage from '~/Components/HeroImage';
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: 'Alum Bank Community Volunteer Fire Company' }, { name: 'description', content: 'Welcome to React Router!' }];
@@ -36,10 +37,14 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 
   return (
     <>
-      <h1>Home</h1>
-      {Home_Data.elements.map((block, index) => {
-        return <Article key={index} data={block} />;
-      })}
+      <HeroImage src={`/StockPhotos/GearOnRack.jpg`} alt='Firefighter protective gear on a wall rack' h1={`Home`} />
+      <main>
+        <h1>Home</h1>
+        {Home_Data.elements.map((block, index) => {
+          return <Article key={index} data={block} />;
+        })}
+      </main>
+
       {/*
       <ul>
         <li>create pages that use general formatting.</li>

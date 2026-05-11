@@ -63,7 +63,7 @@ nav>span{@apply md:hidden}
 *start styles for hamburger nav menu
 */
 nav{
-  @apply fixed top-0 h-full ease-in-out duration-300 inset-shadow-sm md:shadow-sm md:relative md:bottom-auto md:h-auto
+  @apply z-3 fixed top-0 h-full ease-in-out duration-300 inset-shadow-sm md:shadow-sm md:relative md:bottom-auto md:h-auto
 }
 nav.isClosed{
   @apply -top-full ;
@@ -100,6 +100,9 @@ article li p{
   @apply mb-2;
 }
 h1, h3, p{@apply text-(--color-accent-dark);}
+.heroImageContainer h1{
+  @apply text-(--color-background-dark)
+}
 
 
 
