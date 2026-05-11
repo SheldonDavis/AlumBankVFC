@@ -156,7 +156,7 @@ export default function RequestForm({ submitBtnText, txtAreaLBL, formName, formF
             ${
               isSubmitting
                 ? 'bg-secondary-await text-white cursor-not-allowed'
-                : 'cursor-pointer bg-secondary text-white hover:bg-secondary-hover hover:shadow-none hover:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+                : 'cursor-pointer bg-accent text-white hover:bg-accent-hover hover:shadow-none hover:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-indigo'
             }`}
         >
           {isSubmitting ? 'Submitting...' : submitBtnText}

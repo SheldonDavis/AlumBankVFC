@@ -54,7 +54,7 @@ nav>ul>li>a.active:hover{
   @apply  border-transparent ;
 }
 nav>ul>li>a.SpecialNavButton {
-  @apply bg-(--color-accent) text-(--color-accent-foreground) rounded-sm transition-all duration-300 ease-in-out my-2 shadow-sm;
+  @apply bg-(--color-accent) text-(--color-accent-foreground) rounded-sm transition-all duration-300 ease-in-out my-2 shadow-sm  inline-block;
 }
 nav>ul>li>a.SpecialNavButton:hover {
   @apply  inset-shadow-sm bg-(--color-accent-hover);
