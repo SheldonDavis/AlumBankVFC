@@ -120,6 +120,7 @@ h1, h3, p{@apply text-(--color-accent-dark);}
 .cardArticles > article, .CalendarEvents > aside, form{
   @apply p-4 bg-(--color-background) border border-slate-100 shadow-sm rounded-lg md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] ;
 }
+form{@apply m-auto md:w-[calc(75%-1rem)] lg:w-[calc(50%-1rem)]}
 .cardArticles > article  img, .CalendarEvents > aside  img{
   @apply w-full h-auto mb-4;
 }
