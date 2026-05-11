@@ -14,7 +14,7 @@ export const AboutUs_Data: VFC_Page = {
         },
         {
           type: `paragraph`,
-          value: `The Alum Bank Fire Company is an all-volunteer department with 29 members operating out of one station. It is required that all members receive training equivalent to NFPA 1001 prior to assuming an active role in this department. Such training is approved by the state of Pennsylvania and includes a 166hour entry level Fire Training Program, a Structure Burn Program, and a Hazardous Material Response Program.`,
+          value: `The Alum Bank Fire Company is an all-volunteer department with 29 members operating out of one station. It is required that all members receive training equivalent to NFPA 1001 prior to assuming an active role in this department. Such training is approved by the state of Pennsylvania and includes a 166 hour entry level Fire Training Program, a Structure Burn Program, and a Hazardous Material Response Program.`,
         },
       ],
     },
