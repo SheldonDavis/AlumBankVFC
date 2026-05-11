@@ -14,9 +14,7 @@ export default function Shell({ loaderData }: Route.ComponentProps) {
   return (
     <>
       <Header path={loaderData.path} />
-      <main className={``}>
-        <Outlet />
-      </main>
+      <Outlet />
     </>
   );
 }

@@ -16,18 +16,20 @@ export async function clientLoader({ params }: Route.LoaderArgs) {}
 export default function ContactUs({ loaderData }: Route.ComponentProps) {
   return (
     <>
-      <h1>Contact Us</h1>
-      {ContactUs_Data.elements.map((block, index) => {
-        return <Article key={index} data={block} />;
-      })}
-      <PageBreakWrapper>
-        <p>OR</p>
-      </PageBreakWrapper>
+      <main>
+        <h1>Contact Us</h1>
+        {ContactUs_Data.elements.map((block, index) => {
+          return <Article key={index} data={block} />;
+        })}
+        <PageBreakWrapper>
+          <p>OR</p>
+        </PageBreakWrapper>
 
-      <RequestForm submitBtnText='Submit Contact form' txtAreaLBL='Your Message' formName='Contact' formFriendlyName='Contact Us' />
-      {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
+        <RequestForm submitBtnText='Submit Contact form' txtAreaLBL='Your Message' formName='Contact' formFriendlyName='Contact Us' />
+        {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
         <Article key={i} data={block} />
       ))} */}
+      </main>
     </>
   );
 }

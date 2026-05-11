@@ -23,13 +23,15 @@ export async function clientLoader({ params }: Route.LoaderArgs) {
 export default function Members({ loaderData }: Route.ComponentProps) {
   return (
     <>
-      <h1>Members</h1>
-      {Members_Data.elements.map((block, index) => {
-        return <Article key={index} data={block} />;
-      })}
-      {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
+      <main>
+        <h1>Members</h1>
+        {Members_Data.elements.map((block, index) => {
+          return <Article key={index} data={block} />;
+        })}
+        {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
         <Article key={i} data={block} />
       ))} */}
+      </main>
     </>
   );
 }

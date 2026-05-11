@@ -23,15 +23,17 @@ export async function clientLoader({ params }: Route.LoaderArgs) {
 export default function AboutUs({ loaderData }: Route.ComponentProps) {
   return (
     <>
-      <h1>About Us</h1>
-      {AboutUs_Data.elements.map((block, index) => {
-        return <Article key={index} data={block} />;
-      })}
+      <main>
+        <h1>About Us</h1>
+        {AboutUs_Data.elements.map((block, index) => {
+          return <Article key={index} data={block} />;
+        })}
 
-      {/* <p>body content - about us</p> */}
-      {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
+        {/* <p>body content - about us</p> */}
+        {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
         <Article key={i} data={block} />
       ))} */}
+      </main>
     </>
   );
 }

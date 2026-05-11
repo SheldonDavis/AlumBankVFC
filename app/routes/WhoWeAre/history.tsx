@@ -23,14 +23,15 @@ export async function clientLoader({ params }: Route.LoaderArgs) {
 export default function History({ loaderData }: Route.ComponentProps) {
   return (
     <>
-      <h1>History</h1>
-
-      {History_Data.elements.map((block, index) => {
-        return <Article key={index} data={block} />;
-      })}
-      {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
+      <main>
+        <h1>History</h1>
+        {History_Data.elements.map((block, index) => {
+          return <Article key={index} data={block} />;
+        })}
+        {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
         <Article key={i} data={block} />
       ))} */}
+      </main>
     </>
   );
 }

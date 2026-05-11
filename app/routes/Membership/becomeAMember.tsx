@@ -23,13 +23,15 @@ export async function clientLoader({ params }: Route.LoaderArgs) {
 export default function BecomeAMember({ loaderData }: Route.ComponentProps) {
   return (
     <>
-      <h1>Become a member</h1>
-      {BecomeAMember_Data.elements.map((block, index) => {
-        return <Article key={index} data={block} />;
-      })}
-      {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
+      <main>
+        <h1>Become a member</h1>
+        {BecomeAMember_Data.elements.map((block, index) => {
+          return <Article key={index} data={block} />;
+        })}
+        {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
         <Article key={i} data={block} />
       ))} */}
+      </main>
     </>
   );
 }

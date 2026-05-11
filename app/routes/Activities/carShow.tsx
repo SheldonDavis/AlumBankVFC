@@ -59,52 +59,54 @@ export default function CarShow({ loaderData }: Route.ComponentProps) {
 
   return (
     <>
-      <h1>Car Show</h1>
-      {CarShow_Data.elements.map((block, index) => {
-        return <Article key={index} data={block} />;
-      })}
-
-      <div className={`CalendarEvents`}>
-        {events.map((calEvent, index) => {
-          return (
-            <aside key={index}>
-              <h3>
-                <a href={calEvent.htmlLink} target='_blank'>
-                  {calEvent.summary}
-                </a>
-              </h3>
-              {calEvent.start.dateTime ? (
-                <p>
-                  {new Date(calEvent.start.dateTime).toLocaleDateString('en-US', dateFormatOptions)}{' '}
-                  {calEvent.start.timeZone && ` (${calEvent.start.timeZone})`}
-                  {calEvent.end.dateTime && (
-                    <>
-                      {` - `}
-                      {new Date(calEvent.end.dateTime).toLocaleDateString('en-US', dateFormatOptions)}
-                      {calEvent.end.timeZone && ` (${calEvent.end.timeZone})`}
-                    </>
-                  )}
-                </p>
-              ) : (
-                calEvent.start.date && (
-                  <p>
-                    {` `}
-                    {new Date(calEvent.start.date).toLocaleDateString('en-US', dateFormatOptions)}
-                  </p>
-                )
-              )}
-              {calEvent.description && (
-                <>
-                  <p>{calEvent.description}</p>
-                </>
-              )}
-            </aside>
-          );
+      <main>
+        <h1>Car Show</h1>
+        {CarShow_Data.elements.map((block, index) => {
+          return <Article key={index} data={block} />;
         })}
-      </div>
-      {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
+
+        <div className={`CalendarEvents`}>
+          {events.map((calEvent, index) => {
+            return (
+              <aside key={index}>
+                <h3>
+                  <a href={calEvent.htmlLink} target='_blank'>
+                    {calEvent.summary}
+                  </a>
+                </h3>
+                {calEvent.start.dateTime ? (
+                  <p>
+                    {new Date(calEvent.start.dateTime).toLocaleDateString('en-US', dateFormatOptions)}{' '}
+                    {calEvent.start.timeZone && ` (${calEvent.start.timeZone})`}
+                    {calEvent.end.dateTime && (
+                      <>
+                        {` - `}
+                        {new Date(calEvent.end.dateTime).toLocaleDateString('en-US', dateFormatOptions)}
+                        {calEvent.end.timeZone && ` (${calEvent.end.timeZone})`}
+                      </>
+                    )}
+                  </p>
+                ) : (
+                  calEvent.start.date && (
+                    <p>
+                      {` `}
+                      {new Date(calEvent.start.date).toLocaleDateString('en-US', dateFormatOptions)}
+                    </p>
+                  )
+                )}
+                {calEvent.description && (
+                  <>
+                    <p>{calEvent.description}</p>
+                  </>
+                )}
+              </aside>
+            );
+          })}
+        </div>
+        {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
         <Article key={i} data={block} />
       ))} */}
+      </main>
     </>
   );
 }

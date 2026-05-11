@@ -23,15 +23,17 @@ export async function clientLoader({ params }: Route.LoaderArgs) {
 export default function Apparatus({ loaderData }: Route.ComponentProps) {
   return (
     <>
-      <h1>Apparatus</h1>
-      <div className={`cardArticles`}>
-        {Apparatus_Data.elements.map((block, index) => {
-          return <Article key={index} data={block} />;
-        })}
-      </div>
-      {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
+      <main>
+        <h1>Apparatus</h1>
+        <div className={`cardArticles`}>
+          {Apparatus_Data.elements.map((block, index) => {
+            return <Article key={index} data={block} />;
+          })}
+        </div>
+        {/* {loaderData.elements.map((block: VFC_Block, i: Key | null | undefined) => (
         <Article key={i} data={block} />
       ))} */}
+      </main>
     </>
   );
 }

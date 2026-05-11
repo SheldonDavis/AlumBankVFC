@@ -12,14 +12,16 @@ export async function clientLoader({ params }: Route.LoaderArgs) {}
 export default function FireHallRentals({ loaderData }: Route.ComponentProps) {
   return (
     <>
-      <h1 className={`formPGHeader`}>Fire Hall Rentals</h1>
-      <RequestForm
-        submitBtnText='Submit Rental Inquiry'
-        txtAreaLBL='Please describe the occasion and the best time for us to contact you.'
-        formName='FireHallRental'
-        formFriendlyName='Fire Hall Rental'
-        phoneRequired={true}
-      />
+      <main>
+        <h1 className={`formPGHeader`}>Fire Hall Rentals</h1>
+        <RequestForm
+          submitBtnText='Submit Rental Inquiry'
+          txtAreaLBL='Please describe the occasion and the best time for us to contact you.'
+          formName='FireHallRental'
+          formFriendlyName='Fire Hall Rental'
+          phoneRequired={true}
+        />
+      </main>
     </>
   );
 }
