@@ -70,10 +70,12 @@ export default function Header(params: any) {
                   <NavLink
                     to={item.link}
                     className={({ isActive }) => {
+                      let classString = `${item?.css && item.css}`;
+
                       // Check if the current URL matches the parent OR any of its sub-values
                       const isChildActive = item.values?.some((sub) => window.location.pathname === sub.link);
 
-                      return isActive || isChildActive ? `active` : ``;
+                      return `${classString} ${isActive || isChildActive ? ` active` : ``}`;
                     }}
                     onClick={(e) => {
                       item?.type !== `t` && e.preventDefault();
@@ -83,6 +85,7 @@ export default function Header(params: any) {
                         // console.log(item.link?.split(`/`)[1]);
                       }
                     }}
+                    target={item?.target}
                   >
                     {item?.label}
                     {item?.type === `l` && item?.values && <FontAwesomeIcon icon={faCaretDown} size={`xs`} className={`pl-1`} />}

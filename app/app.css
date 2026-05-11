@@ -11,6 +11,7 @@
     --color-secondary-hover: #A11F1F;
     --color-secondary-await: #ED4A4A;
     --color-accent: #1A237E;
+    --color-accent-hover: #4554bf;
     --color-accent-foreground: #ECEFF1;
     --color-accent-dark: #37474F;
     --color-muted: #ECECEC;
@@ -52,9 +53,16 @@ nav>ul>li>a.active{
 nav>ul>li>a.active:hover{
   @apply  border-transparent ;
 }
+nav>ul>li>a.SpecialNavButton {
+  @apply bg-(--color-accent) text-(--color-accent-foreground) rounded-sm transition-all duration-300 ease-in-out my-2 shadow-sm;
+}
+nav>ul>li>a.SpecialNavButton:hover {
+  @apply  inset-shadow-sm bg-(--color-accent-hover);
+}
+
 nav>ul>li>ul{
   @apply cursor-pointer w-auto text-left z-10 p-2 min-w-full w-max bg-(--color-background) 
-  md:bg-(--color-background-dark) md:absolute md:top-full md:left-0;
+  md:bg-(--color-background-dark) md:absolute md:top-full md:left-0 md:rounded-b-sm;
 }
 nav>ul>li>ul>li>p>a{ @apply  block p-2 text-center md:text-left}
 nav>span{@apply md:hidden}

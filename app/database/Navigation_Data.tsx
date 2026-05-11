@@ -109,6 +109,13 @@ const NavigationItem_ContactsRentals: VFC_Data = {
   ],
   link: `/contacts-rentals/contact-us`,
 };
+const NavigationItem_Paypal: VFC_Data = {
+  type: `t`,
+  label: `Donate via PayPal`,
+  link: `https://www.paypal.com/donate?token=6B_z9pse9CFrIB80pc1m3PWbkYolLEz9gY3GYcYIojB_9hjIeoBxz8fEMPkl7KixM1pVjGIuuIR1h9Ap`,
+  target: `_blank`,
+  css: `SpecialNavButton`,
+};
 
 export const Navigation_Data: VFC_Data[] = [
   NavigationItem_Home,
@@ -116,4 +123,5 @@ export const Navigation_Data: VFC_Data[] = [
   NavigationItem_Membership,
   NavigationItem_Activities,
   NavigationItem_ContactsRentals,
+  NavigationItem_Paypal,
 ];
