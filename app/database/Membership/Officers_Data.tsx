@@ -3,7 +3,7 @@ import type { VFC_Page, VFC_List } from '~/customTypes/Page';
 const AdminOfficers: VFC_List[] = [
   {
     label: `President`,
-    value: `Travis Blackburn`,
+    value: `Gerald Leppert`,
   },
   {
     label: `Vice President`,
@@ -11,41 +11,41 @@ const AdminOfficers: VFC_List[] = [
   },
   {
     label: `Treasurer `,
-    value: `Kelly Davis`,
+    value: `Dawn Imler`,
   },
   {
     label: `Secretary`,
-    value: `Dawn Imler`,
+    value: `Tyler Dull`,
   },
   {
     label: `Chaplain`,
     value: `Pastor Kevin Davis`,
   },
 ];
-const FireLaneOfficers: VFC_List[] = [
+const FireLineOfficers: VFC_List[] = [
   {
     label: `Chief`,
-    value: `Thad Yothers`,
-  },
-  {
-    label: `Deputy Chief`,
     value: `Ryan Mickey`,
   },
   {
-    label: `1st Assistant Chief`,
+    label: `Deputy Chief`,
     value: `Bradlee Sharp`,
   },
   {
+    label: `1st Assistant Chief`,
+    value: `Brad Harbaugh`,
+  },
+  {
     label: `2nd Assistant Chief`,
-    value: `Jerry Leppert`,
+    value: `Travis Blackburn`,
   },
   {
     label: `3rd Assistant Chief`,
-    value: `David Webb`,
+    value: `Brian Greenwald`,
   },
   {
     label: `Safety Officer`,
-    value: `Kelly Davis`,
+    value: `Gerald Lappert`,
   },
   {
     label: `Chief Engineer`,
@@ -53,11 +53,11 @@ const FireLaneOfficers: VFC_List[] = [
   },
   {
     label: `1st Assistant Engineer`,
-    value: `Bryce Vitovich`,
+    value: `Kelly Davis`,
   },
   {
     label: `2nd Assistant Engineer`,
-    value: `Brian Greenwald`,
+    value: `Thad Yothers`,
   },
 ];
 
@@ -76,8 +76,8 @@ export const Officers_Data: VFC_Page = {
       content: [
         {
           type: `list`,
-          label: `2025 Fire Line Officers`,
-          values: FireLaneOfficers,
+          label: `2026 Fire Line Officers`,
+          values: FireLineOfficers,
         },
       ],
     },

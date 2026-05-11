@@ -22,7 +22,6 @@ const MemberList: VFC_List[] = [
   { value: `Imler, Dawn` },
   { value: `Lemerise, Joseph` },
   { value: `Leppert, Gerald "Jerry"` },
-  { value: `Martin, Troy` },
   { value: `McClain, Timothy` },
   { value: `Mickey, Ryan` },
   { value: `Miller, Ryan` },
