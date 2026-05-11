@@ -29,19 +29,18 @@ body {
   }  */
 }
 main{
-  @apply pt-16 pb-16 pr-8 pl-8 m-auto max-w-7xl;
+  @apply pt-16 pb-16 pr-8 pl-8 m-auto max-w-7xl h-auto;
 }
 header{
-  @apply   top-0 w-full  md:h-auto md:sticky bg-(--color-header);
+  @apply top-0 w-full  md:h-auto md:sticky bg-(--color-header);
   /* fixed */
 }
 nav{
-  @apply w-full h-full bg-(--color-background-dark) shadow-sm ;
+  @apply w-full h-full bg-(--color-background-dark) z-3 fixed top-0 h-full ease-in-out duration-300 inset-shadow-sm md:shadow-sm md:relative md:bottom-auto md:h-auto
 }
 /* nav.isClosed{@apply left-full md:left-auto md:transition-none;} */
 nav>ul{
-  @apply  gap-2 text-center items-stretch m-auto max-w-7xl flex flex-col justify-center
-  md:flex-row md:gap-4;
+  @apply  gap-2 text-center items-stretch m-auto max-w-7xl flex flex-col justify-center md:flex-row md:gap-4 h-full md:h-auto
 }
 nav>ul>li{@apply  items-stretch relative md:flex;}
 nav>ul>li>a{
@@ -57,7 +56,7 @@ nav>ul>li>a.SpecialNavButton {
   @apply bg-(--color-accent) text-(--color-accent-foreground) rounded-sm transition-all duration-300 ease-in-out my-2 shadow-sm  inline-block;
 }
 nav>ul>li>a.SpecialNavButton:hover {
-  @apply  inset-shadow-sm bg-(--color-accent-hover);
+  @apply inset-shadow-sm bg-(--color-accent-hover);
 }
 
 nav>ul>li>ul{
@@ -65,22 +64,14 @@ nav>ul>li>ul{
   md:bg-(--color-background-dark) md:absolute md:top-full md:left-0 md:rounded-b-sm;
 }
 nav>ul>li>ul>li>p>a{ @apply  block p-2 text-center md:text-left}
-nav>span{@apply md:hidden}
-
+nav>span{
+  @apply md:hidden fixed top-2 right-2 bg-(--color-header) p-2 rounded-sm cursor-pointer
+}
 /*
 *start styles for hamburger nav menu
 */
-nav{
-  @apply z-3 fixed top-0 h-full ease-in-out duration-300 inset-shadow-sm md:shadow-sm md:relative md:bottom-auto md:h-auto
-}
 nav.isClosed{
   @apply -top-full ;
-}
-nav>ul{
-@apply h-full md:h-auto
-}
-nav span{
-  @apply fixed top-2 right-2 bg-(--color-header) p-2 rounded-sm cursor-pointer
 }
 nav span svg path{ @apply fill-(--color-background-dark) ease-in-out}
 /*

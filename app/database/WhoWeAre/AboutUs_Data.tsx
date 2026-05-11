@@ -10,7 +10,7 @@ export const AboutUs_Data: VFC_Page = {
         },
         {
           type: `paragraph`,
-          value: `It is mostly a farming and residential area with one industrial park. We provide protection to 19- churches, 4- schools, 2-post offices, 1- bank, 5- medical care facilities, 7- restaurants, and 3- gas stations. We provide automatic mutual aide to 6 departments spanning three counties. When taking automatic aide into consideration , we respond to an area of over 1200 square miles with a population of 30,809 residents.`,
+          value: `It is mostly a farming and residential area with one industrial park. We provide protection to 19 churches, 4 schools, 2 post offices, 1 bank, 5 medical care facilities, 7 restaurants, and 3 gas stations. We provide automatic mutual aide to 6 departments spanning three counties. When taking automatic aide into consideration , we respond to an area of over 1200 square miles with a population of 30,809 residents.`,
         },
         {
           type: `paragraph`,
