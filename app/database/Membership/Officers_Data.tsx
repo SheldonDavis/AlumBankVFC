@@ -48,6 +48,10 @@ const FireLineOfficers: VFC_List[] = [
     value: `Gerald Lappert`,
   },
   {
+    label: `Safety Officer 2`,
+    value: `George Beaner`,
+  },
+  {
     label: `Chief Engineer`,
     value: `Butch Blackburn`,
   },
