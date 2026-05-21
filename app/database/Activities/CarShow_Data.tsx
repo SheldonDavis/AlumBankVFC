@@ -18,6 +18,12 @@ export const CarShow_Data: VFC_Page = {
           link: `http://alumbankclassicweekend.blogspot.com/`,
           target: `_blank`,
         },
+        {
+          type: `paragraph`,
+          value: `Alum Bank Classic Weekend Facebook page`,
+          link: `https://www.facebook.com/p/Alum-Bank-Classic-Weekend-61574201552362/`,
+          target: `_blank`,
+        },
       ],
     },
   ],
