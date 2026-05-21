@@ -112,7 +112,7 @@ const NavigationItem_ContactsRentals: VFC_Data = {
 const NavigationItem_Paypal: VFC_Data = {
   type: `t`,
   label: `Donate via PayPal`,
-  link: `https://www.paypal.com/donate?token=6B_z9pse9CFrIB80pc1m3PWbkYolLEz9gY3GYcYIojB_9hjIeoBxz8fEMPkl7KixM1pVjGIuuIR1h9Ap`,
+  link: `https://www.paypal.com/donate/?hosted_button_id=TW3BK4P7BL6PL`,
   target: `_blank`,
   css: `SpecialNavButton`,
 };
